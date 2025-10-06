@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script>
+        function criarPedido() {
+            const valor = document.getElementById("valorPedido").value;
+            const status = document.getElementById("statusPedido");
+
+            if (valor > 0) {
+                status.innerText = "Pedido criado com sucesso.";
+            } else {
+                status.innerText = "O valor do pedido deve ser maior que 0."
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Cadastro de Pedido</h1>
+    <label for="valorPedido">Valor do Pedido:</label>
+    <input type="number" id="valorPedido" />
+    <button id="btnCriar" onclick="criarPedido()">Criar Pedido</button>
+    <p id="statusPedido"></p>
+</body>
+</html>
